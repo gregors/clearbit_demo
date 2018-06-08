@@ -1,0 +1,108 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    ast (2.4.0)
+    bootsnap (1.3.0)
+      msgpack (~> 1.0)
+    clearbit (0.2.8)
+      nestful (~> 1.1.0)
+    diff-lcs (1.3)
+    docile (1.3.1)
+    dotenv (2.4.0)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
+    hashie (3.5.7)
+    jaro_winkler (1.5.1)
+    json (2.1.0)
+    msgpack (1.2.4)
+    multipart-post (2.0.0)
+    mustermann (1.0.2)
+    nestful (1.1.3)
+    parallel (1.12.1)
+    parser (2.5.1.0)
+      ast (~> 2.4.0)
+    plaid (6.0.0)
+      faraday
+      faraday_middleware
+      hashie (>= 3.4.3)
+    powerpack (0.1.1)
+    public_suffix (3.0.2)
+    puma (3.11.4)
+    rack (2.0.5)
+    rack-canonical-host (0.2.3)
+      addressable (> 0, < 3)
+      rack (>= 1.0.0, < 3)
+    rack-protection (2.0.2)
+      rack
+    rack-test (1.0.0)
+      rack (>= 1.0, < 3)
+    rack-timeout (0.5.1)
+    rainbow (3.0.0)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.1)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.1)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
+    rubocop (0.57.1)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.9.0)
+    simplecov (0.16.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    sinatra (2.0.2)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.2)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+    unicode-display_width (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bootsnap
+  clearbit
+  dotenv
+  plaid
+  puma
+  rack-canonical-host
+  rack-test
+  rack-timeout
+  rspec
+  rspec-its
+  rspec_junit_formatter
+  rubocop
+  simplecov
+  sinatra
+
+RUBY VERSION
+   ruby 2.4.1p111
+
+BUNDLED WITH
+   1.16.2

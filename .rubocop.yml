@@ -1,0 +1,43 @@
+Layout/CaseIndentation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockComments:
+  Exclude:
+    - "spec/**/*"
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - "spec/**/*"
+
+Performance/Casecmp:
+   Enabled: false
+
+Style/ClassVars:
+   Enabled: false
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 50
+  Exclude:
+    - "spec/**/*"
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - helpers/includes_helper.rb
+    - spec/helpers/view_helper_spec.rb
+
+Lint/HandleExceptions:
+  Exclude:
+    - 'tasks/spec.rake'
+
+Metrics/AbcSize:
+  Exclude:
+    - services/bank_data.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - services/bank_data.rb

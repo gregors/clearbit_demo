@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%= css_includes %>
+    <title>Transactions</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Clearbit Demo</span>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a id='sign-out' class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+            <th scope="col">Recurring</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @transactions.each_with_index do |transaction, index| %>
+            <tr scope="row">
+              <td scope="row"><%= index %></td>
+              <td><%= "#{logo_helper(transaction)} #{name_helper(transaction)}" %></td>
+              <td><%= format_currency(transaction.amount) %></td>
+              <td><%= transaction.date %></td>
+              <td><%= recurring?(transaction) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+    <%= js_includes %>
+    <script>
+      (function($) {
+          <%= delete_link_js '#sign-out', '/session', '/' %>
+      })(jQuery);
+    </script>
+  </body>
+</html>

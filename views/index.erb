@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= css_includes %>
+    <title>Clearbit demo</title>
+  </head>
+  <body class="text-center">
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Clearbit Demo</span>
+    </nav>
+
+    <div class="container">
+
+      <div class="row mt-5">
+        <div class="col">
+          <div class="link-account">
+            <h1 class="h3 mb-3 font-weight-normal">Please Link Accounts</h1>
+            <button id="link-btn" class="btn btn-lg btn-primary" >Link Account</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="please-wait" style="display:none">
+            <h1>Loading...</h1>
+            <img src="ajax-loader.gif" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= js_includes %>
+    <script>
+      (function($) {
+        var handler = Plaid.create({
+          apiVersion: 'v2',
+          clientName: 'Plaid',
+          env: 'sandbox',
+          product: ['transactions'],
+          key: '<%= ENV["PLAID_PUBLIC_KEY"] %>',
+          onSuccess: function(public_token) {
+            $('.link-account').hide();
+            $('.please-wait').show();
+            $.post('/session', {public_token: public_token}, function() {
+              window.location.href = '/transactions'
+            });
+          },
+        });
+
+        $('#link-btn').on('click', function(e) {
+          handler.open();
+        });
+
+      })(jQuery);
+    </script>
+  </body>
+</html>
