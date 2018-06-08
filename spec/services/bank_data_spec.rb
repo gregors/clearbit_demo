@@ -2,7 +2,7 @@ require_relative '../../services/bank_data'
 
 describe BankData do
   describe '.plaid_transactions' do
-    it 'retrieves a signle transaction' do
+    it 'retrieves a single transaction' do
       trans = [instance_double('Plaid::Models::Transaction')]
 
       response = instance_double('Plaid::GetResponse', transactions: trans)
