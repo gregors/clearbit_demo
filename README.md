@@ -1,4 +1,6 @@
-# Clearbit Demo 
+# Clearbit Demo
+
+https://clearbit-demo.herokuapp.com/
 
 Takes fake transactions from Plaid and uses the Clearbit api to find urls and logos for companies.
 If Clearbit can't find a logo - use Plaid categories to select a default icon from fontawesome.
@@ -18,7 +20,7 @@ To run the specs or fire up the server, be sure you have these installed (and ru
 ### First Time Setup
 
 After cloning, run:
-    $ bundle install 
+    $ bundle install
 
 #### `.env`
 
@@ -26,7 +28,7 @@ There is a `.env.sample` file that defines settings for your local environment. 
 
 ### Running the Specs
 
-    $ rake 
+    $ rake
 
 ### Running the Application Locally
 
@@ -83,14 +85,14 @@ Several common features and operational parameters can be set using environment 
 * `PLAID_SECRET` - Secret key for Plaid access
 * `PLAID_PUBLIC_KEY` - Plaid public key
 * `PLAID_ENV` - Paid environment set to sandbox by default
-* `CLEARBIT_KEY` - Clearbit API key 
+* `CLEARBIT_KEY` - Clearbit API key
 * `SESSION_SECRET` - Secret key base for verifying signed cookies. Should be 30+ random characters and secret!
 * `PORT` - Port to listen on (default: 5000).
 
 **Optional**
 
 * `HOSTNAME` - Canonical hostname for this application. Other incoming requests will be redirected to this hostname.
-* `RACK_TIMEOUT_SERVICE_TIMEOUT` - Terminate requests that take longer than this time (default: 15s). 
+* `RACK_TIMEOUT_SERVICE_TIMEOUT` - Terminate requests that take longer than this time (default: 15s).
 
 ### Third Party Services
 
