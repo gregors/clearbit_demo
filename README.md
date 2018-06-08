@@ -39,7 +39,6 @@ The easiest way to run the app is using `heroku local`. This starts all the proc
 
 ### Git
 
-* Branch `development` is auto-deployed to acceptance.
 * Branch `master` is auto-deployed to production.
 * Create feature branches off of `development` using the naming convention
   `(features|chores|bugs)/a-brief-description-######`, where ###### is the tracker id.
