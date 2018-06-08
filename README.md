@@ -55,18 +55,20 @@ The easiest way to run the app is using `heroku local`. This starts all the proc
 
 Rubocop is configured to enforce the style guide for this project.
 
+    $ rake rubocop
+
 ## Additional/Optional Development Details
 
 ### Code Coverage (local)
 
 Coverage for the ruby specs:
 
-    $ COVERAGE=true rspec
+    $ rake spec:coverage
     $ open coverage/index.html
 
 ### Continuous Integration/Deployment with CircleCI and Heroku
 
-This project is configured for continuous integration with CircleCI, see [circle.yml](circle.yml) for details.
+This project is configured for continuous integration with CircleCI, see [.circleci/config.yml](.circleci/config.yml) for details.
 
 On successful builds, Heroku will trigger a deployment via its
 [GitHub Integration](https://devcenter.heroku.com/articles/github-integration#automatic-deploys).
