@@ -30,8 +30,14 @@ end
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 require_relative '../models/transaction'
 require 'rspec/its'
+
+# session stub for testing
+def session
+  last_request.env['rack.session']
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
