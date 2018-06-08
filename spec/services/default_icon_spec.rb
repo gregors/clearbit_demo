@@ -19,5 +19,13 @@ describe DefaultIcon do
         expect(subject).to be_nil
       end
     end
+
+    context 'with no category' do
+      let(:category) { [] }
+
+      it 'returns nil' do
+        expect(subject).to be_nil
+      end
+    end
   end
 end

@@ -11,6 +11,6 @@ class DefaultIcon
   }
 
   def self.get(categories)
-    @@icons[categories.last.downcase]
+    @@icons[categories.last&.downcase]
   end
 end
