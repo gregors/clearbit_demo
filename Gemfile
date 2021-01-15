@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Heroku uses the ruby version to configure your application"s runtime.
-ruby '2.4.1'
+ruby '2.7.0'
 
 # Back-endy
 gem 'bootsnap', require: false
