@@ -15,7 +15,7 @@ Also specify is the transaction is recurring via categories.
 
 To run the specs or fire up the server, be sure you have these installed (and running):
 
-* Ruby 2.4 (see [.ruby-version](.ruby-version)).
+* Ruby 2.7 (see [.ruby-version](.ruby-version)).
 * Heroku CLI (`brew install heroku`).
 
 ### First Time Setup
