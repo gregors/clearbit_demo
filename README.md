@@ -2,7 +2,6 @@
 
 [![CircleCI](https://circleci.com/gh/gregors/clearbit_demo.svg?style=svg)](https://circleci.com/gh/gregors/clearbit_demo)
 
-https://clearbit-demo.herokuapp.com/
 
 Takes fake transactions from Plaid and uses the Clearbit api to find urls and logos for companies.
 If Clearbit can't find a logo - use Plaid categories to select a default icon from fontawesome.
